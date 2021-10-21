@@ -1,18 +1,14 @@
-// biglietto del treno
-
+// ___ BIGLIETTO DEL TRENO ___
 // richiesta dei parametri utente (km ed età passeggiero)
-const Km = prompt('Km da percorrere', '100');
-const utente = prompt('Inserisci il tuo nome', 'Alessandro');
-const eta = prompt('Inserisci la tua età', '65');
-
-
+const Km = prompt('Km da percorrere');
+const eta = prompt('Inserisci la tua età');
+const utente = prompt('Inserisci il tuo nome');
 
 // Parametri costanti
-const prezzo_per_Km = 0.21
+const prezzo_per_Km = 0.21;
 
 // formula di calcolo prezzo biglietto
-let prezzo = prezzo_per_Km * Km
-console.log(prezzo)
+let prezzo = prezzo_per_Km * Km;
 
 // condizioni sconti 
 if ( (eta >= 18) && (eta < 65) ) {
@@ -26,7 +22,10 @@ if ( (eta >= 18) && (eta < 65) ) {
 }
 
 // trasformazione a due decimali
-prezzo = prezzo.toFixed(2)
+prezzo = prezzo.toFixed(2);
 
 // inserimento dati nel documento
-
+document.getElementById('km').innerHTML = Km;
+document.getElementById('eta').innerHTML = eta;
+document.getElementById('utente').innerHTML = utente;
+document.getElementById('prezzo').innerHTML = prezzo;
